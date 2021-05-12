@@ -1,0 +1,4 @@
+in the execute windows batch commandcd
+git init --quiet
+git pull --quiet https://github.com/rtayek/chief.git
+gradle --quiet

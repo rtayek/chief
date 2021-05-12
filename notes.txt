@@ -1,0 +1,29 @@
+set up agents and have them run jobs
+make the tf1 image and load it to dockerhub
+first job runs job1.bat advanced custom workspace need for batch file.
+running dependent job will do a pull so it will get the latest
+
+
+
+https://www.toolsqa.com/jenkins/jenkins-build-jobs/
+https://www.happycoders.eu/devops/jenkins-tutorial-create-jobs-with-job-dsl/
+https://vocon-it.com/2017/02/27/jenkins-part-5-1-using-the-job-dsl-for-automatic-creation-of-jenkins-jobs/#Why_creating_Jenkins_Jobs_via_Groovy_Scripts
+https://www.digitalocean.com/community/tutorials/how-to-automate-jenkins-job-configuration-using-job-dsl
+https://medium.com/slalom-build/automatically-generating-jenkins-jobs-d30d4b0a2b49
+
+maybe since we have the jenkins war as a dependency
+we could just call it from a java program. yes, but not working yet.
+
+fix the crlf's - use: git config --list --show-origin
+
+ agent { // set up am agent to run the python job
+    docker {
+      image 'node:6-alpine'
+      args '-p 3000:3000'
+    }
+use job dsl to install jobs 
+use gradle wrapper on chief so he can download the jenkins war if not present
+or maybe just groovy and grape.
+add tomcat?
+python venvs
+common groovy script - maybe just put in master custom workspace with a git pull 

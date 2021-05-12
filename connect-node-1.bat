@@ -1,0 +1,7 @@
+REM @echo off
+REM http://yourserver:port/jnlpJars/agent.jar
+REM Run from agent command line:
+java -jar lib/agent.jar -jnlpUrl http://localhost:8080/computer/agent-1/jenkins-agent.jnlp -secret a09b5a8a882b3983002924e65c35adac1e961c9d17053bdd7c6507d4d41b0d46 -workDir "c:\jenkins-node-1"
+REM Run from agent command line, with the secret stored in a file:
+REM echo a09b5a8a882b3983002924e65c35adac1e961c9d17053bdd7c6507d4d41b0d46 > secret-file
+REM java -jar agent.jar -jnlpUrl http://localhost:8080/computer/agent-1/jenkins-agent.jnlp -secret @secret-file -workDir "c:\jenkins-node-1"

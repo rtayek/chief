@@ -1,0 +1,38 @@
+# chief
+
+takeown /R /A /F foldername /D N
+icacls foldername /grant Administrators:F /T /C (repeat as necessary)
+
+# shell script for ativating venv
+#/bin/bash
+set -euox pipefail
+
+# Get an unique venv folder to using *inside* workspace
+VENV=".venv-$BUILD_NUMBER"
+
+# Initialize new venv
+virtualenv "$VENV"
+
+# Update pip
+PS1="${PS1:-}" source "$VENV/bin/activate"
+
+# another shell
+
+if (fileExists('requirements/preinstall.txt')) {
+    sh """
+    . .env/bin/activate
+    pip install -r requirements/preinstall.txt
+    """
+}
+...
+sh """
+. .env/bin/activate
+pip install -r requirements/test.txt
+"""
+}
+stage("Unittests") {
+    sh """
+    . .env/bin/activate
+    ./manage.py test --noinput
+    """
+}
