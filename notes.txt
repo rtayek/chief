@@ -1,3 +1,5 @@
+this is now chief https://github.com/rtayek/chief.git
+so i guess we clone and import into eclipse.
 set up agents and have them run jobs
 make the tf1 image and load it to dockerhub
 first job runs job1.bat advanced custom workspace need for batch file.
