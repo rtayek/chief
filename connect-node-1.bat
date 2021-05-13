@@ -1,5 +1,6 @@
 REM @echo off
-REM http://yourserver:port/jnlpJars/agent.jar
+REM connect this agent (slave) node to controller (master) node.
+REM http://192.168.1.6:8080/jnlpJars/agent.jar
 REM Run from agent command line:
 java -jar lib/agent.jar -jnlpUrl http://localhost:8080/computer/agent-1/jenkins-agent.jnlp -secret 8619e2f6213143b9901a76b2709aa536 -workDir "c:\jenkins-node-1"
 REM Run from agent command line, with the secret stored in a file:

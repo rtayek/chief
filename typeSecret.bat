@@ -1,0 +1,1 @@
+type jenkins-home\secrets\initialAdminPassword
