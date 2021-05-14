@@ -1,5 +1,6 @@
+rem run this is d:\jenkins
+rem make all these things environment variables!
 set JENKINS_HOME=d:\jenkins\jenkins-home
-java -jar lib/jenkins.war --enable-future-java --httpPort=8080
+java -jar jars\jenkins.war --enable-future-java --httpPort=8080
 
-REM e28da1a9e4f143228f5ba32b1c307b34
-REM e28da1a9e4f143228f5ba32b1c307b34
+REM 432b8d912e934cda93a606afeebae0fd

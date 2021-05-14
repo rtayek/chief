@@ -1,4 +1,10 @@
-in the execute windows batch commandcd
+in the execute windows batch command
 git init --quiet
 git pull --quiet https://github.com/rtayek/chief.git
 gradle --quiet
+
+// just pulling the chief in the first step.
+
+echo %JENKINS_HOME%
+cd
+git pull --quiet https://github.com/rtayek/chief.git
