@@ -6,6 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/jenkins.war"/>
+	<classpathentry kind="lib" path="D:/jenkins/jars/jenkins.war"/>
+	<classpathentry kind="lib" path="D:/jenkins/jars/jenkins-cli.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
