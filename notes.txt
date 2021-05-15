@@ -3,12 +3,24 @@ so i guess we clone and import into eclipse.
 set up agents and have them run jobs
 make the tf1 image and load it to dockerhub
 
+
+job-1 was:
+git clone https://github.com/rtayek/chief.git
+rem dir chief
+chief\job-1.bat
+docker --version
+gradle --version
+mad it shorted to try to get sh to work.
+
 first job runs job1.bat advanced custom workspace need for batch file.
 running dependent job will do a pull so it will get the latest
 
 Node - A machine which is part of the Jenkins environment and capable of executing Pipelines or Projects.
 Both the Controller [master] and Agents [slave] are considered to be Nodes.
 Project
+
+unresolved https://issues.jenkins.io/browse/JENKINS-60473
+this is the absolute path problem.
 
 
 https://www.jenkins.io/doc/book/glossary/
