@@ -1,2 +1,2 @@
-rem https://tudip.com/blog-post/configure-jenkins-job-to-run-batch-command/
+rem 
 echo hello from %*
