@@ -1,18 +1,14 @@
+version 2.277.4
+
+msi 8089 jenkins home /c/Windows/System32/config/systemprofile/AppData/Local/Jenkins/
+
 this is now chief https://github.com/rtayek/chief.git
-so i guess we clone and import into eclipse.
+
 set up agents and have them run jobs
 make the tf1 image and load it to dockerhub
 
-try to clone from local file system
+try to clone from local file system - seems to work well.
 
-
-job-1 was:
-git clone https://github.com/rtayek/chief.git
-rem dir chief
-chief\job-1.bat
-docker --version
-gradle --version
-mad it shorted to try to get sh to work.
 
 first job runs job1.bat advanced custom workspace need for batch file.
 running dependent job will do a pull so it will get the latest
@@ -32,8 +28,6 @@ https://vocon-it.com/2017/02/27/jenkins-part-5-1-using-the-job-dsl-for-automatic
 https://www.digitalocean.com/community/tutorials/how-to-automate-jenkins-job-configuration-using-job-dsl
 https://medium.com/slalom-build/automatically-generating-jenkins-jobs-d30d4b0a2b49
 
-maybe since we have the jenkins war as a dependency
-we could just call it from a java program. yes, but not working yet.
 
 fix the crlf's - use: git config --list --show-origin
 
@@ -43,19 +37,10 @@ fix the crlf's - use: git config --list --show-origin
       args '-p 3000:3000'
     }
 use job dsl to install jobs 
-use gradle wrapper on chief so he can download the jenkins war if not present
+use gradle wrapper on chief so he can download the jenkins war if not present !!!
 or maybe just groovy and grape.
 add tomcat?
 python venvs
 common groovy script - maybe just put in master custom workspace with a git pull 
 
-ran into this problem again:
-
-D:\jenkins\chief>java -jar ../jars/agent.jar -jnlpUrl http://127.0.0.1:8080/computer/agent-99/jenkins-agent.jnlp -secret 432b8d912e934cda93a606afeebae0fd -workDir "d:\jenkins-agent-99"
-May 15, 2021 7:43:46 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
-INFO: Using d:\jenkins-agent-99\remoting as a remoting work directory
-May 15, 2021 7:43:46 PM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
-INFO: Both error and output logs will be printed to d:\jenkins-agent-99\remoting
-[Fatal Error] :1:1: Invalid byte 2 of 3-byte UTF-8 sequence.
-Exception in thread "main" org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Invalid byte 2 of 3-byte UTF-8 sequence.
-        at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262)
+        
