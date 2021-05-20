@@ -2,6 +2,17 @@ version 2.277.4
 
 msi 8089 jenkins home /c/Windows/System32/config/systemprofile/AppData/Local/Jenkins/
 
+javaws http://192.168.1.6:8089/computer/agent-99/jenkins-agent.jnlp 
+works to get 99 connected to 8089
+then he wants to install as a service.
+
+turned off websockets for 86 on msi - both work without websocket on my machine
+
+
+
+
+
+
 this is now chief https://github.com/rtayek/chief.git
 
 set up agents and have them run jobs
