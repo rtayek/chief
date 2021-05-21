@@ -1,0 +1,1 @@
+ java -jar ..\jars\agent.jar -jnlpUrl http://192.168.1.6:8089/computer/agent-99/jenkins-agent.jnlp -workDir "c:/agent-99"
