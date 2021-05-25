@@ -16,6 +16,15 @@ the certs problem
     selected done. hit save. oops - no jenkins
 
 so lets just try some jenkins files and maybe some casc stuff.
+nothing obvious to try except maybe the first example? 
+
+lets try a custom workspace. maybe it will get by the absolute path problem.
+
+turned off running jobs on the controller as recommended.
+made an agent and: javaws http://192.168.1.6:8081/computer/agent-86/jenkins-agent.jnlp
+this works fine on my machine.
+
+recent ip address 108.184.31.122 
 
 
 

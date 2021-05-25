@@ -1,16 +1,33 @@
-pipeline {
-    agent any
+#!groovy
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
-        stage('Build') {
-            agent {
-                docker {
-                    image 'gradle:6.7-jdk11'
-                    // Run the container on the node specified at the top-level of the Pipeline, in the same workspace, rather than on a new node entirely:
-                    reuseNode true
-                }
+        stage('Build') { 
+            steps { 
+                gradle build 
             }
+            post {
+                always {
+                    junit '**/build/test-results/integrationTest/TEST-*.xml'
+                    }
+            }
+        }
+        stage('Test'){
             steps {
-                sh 'gradle --version'
+                echo integration tests
+            }
+            post {
+                always {
+                    junit '**/build/test-results/integrationTest/TEST-*.xml'
+                    }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                gradle run
             }
         }
     }
