@@ -1,0 +1,1 @@
+javaws http://192.168.1.6:8081/computer/agent-86/jenkins-agent.jnlp

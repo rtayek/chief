@@ -69,8 +69,21 @@ python plugins for gradle look complicated
 so fs1 is working again. lets check fs2. both of these are the same. all they do is invoke gradle scripts. this is what we want.
 
 try running docker from command line.
+we can spin up the same image more than once with a different name.
+so python runs fine in a container.
 
 build test deploy train audit
+
+let's trigger another pipeline - trivial - done.
+investigate aggregate the downstream test results
+
+gradle python? maybe venv's
+
+looks like travis ci is it's own thing. maybe look at jervis?
+
+how about gradle ci? found http://stehno.com/gradle-site/asciidoc/html5/
+not sure what this is.
+
 
 
 
