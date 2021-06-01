@@ -77,12 +77,39 @@ build test deploy train audit
 let's trigger another pipeline - trivial - done.
 investigate aggregate the downstream test results
 
-gradle python? maybe venv's
+gradle python? maybe venv's - yes, do this soon
 
 looks like travis ci is it's own thing. maybe look at jervis?
 
 how about gradle ci? found http://stehno.com/gradle-site/asciidoc/html5/
 not sure what this is.
+
+the python wrapper for jenkins seems to be fairly easy to use.
+so get more familiar with that and then try the same things in groovy.
+
+let's try gradle and python. maybe samrocketman has something.
+got sidetracked: check out artifactory
+if jenkins can make the images, store them, and run them maybe we do not need artifactory?
+not clear what this does. maybe just a bit higher level.
+
+we can run a python script. so what about venv's?
+
+we can configure a docker image with whatever custom stuff we need.
+so maybe we do not need to get fancy with the pygradle or https://www.slideshare.net/StephenHolsapple/pythongradle-57668227
+
+maybe all (or most) of the configuration can be placed in the docker files.
+the deployment for any project just associate a docker image name with it.
+you could have a jupyter notebook spin the containers up and run the jobs.
+this could hide some of the details from the users.
+
+idea: if the width of the NN is smaller than the could one replace an image by some weights from a few layers.
+would the weights be much smaller than the image data?
+
+more and more it looks like we should do as little as possible. basicalli one line dos or shell commands.
+
+
+
+
 
 
 
