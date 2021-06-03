@@ -107,6 +107,8 @@ would the weights be much smaller than the image data?
 
 more and more it looks like we should do as little as possible. basicalli one line dos or shell commands.
 
+maybe work on getting x in wsl working.
+
 
 
 
